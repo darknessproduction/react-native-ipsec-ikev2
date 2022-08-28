@@ -176,12 +176,12 @@ public class RNIpSecVpn extends ReactContextBaseJavaModule implements OnVpnProfi
 
                 PrivateKey key = null;
                 try {
-                    key = UserCredentialManager.getInstance().getUserKey("vpnclient", "080021500".toCharArray());
+                    //key = UserCredentialManager.getInstance().getUserKey("vpnclient", "080021500".toCharArray());
 
-                    if (key == null) {
+                    //if (key == null) {
                         UserCredentialManager.getInstance().storeCredentials(b64UserCert.getBytes(),
                                 userCertPassword.toCharArray());
-                    }
+                    //}
                     Log.i(TAG, "Certificate Added");
 
                     // Decode the CA certificate from base64 to an X509Certificate
@@ -205,8 +205,8 @@ public class RNIpSecVpn extends ReactContextBaseJavaModule implements OnVpnProfi
                     e.printStackTrace();
                 } catch (IOException e) {
                     e.printStackTrace();
-                } catch (UnrecoverableKeyException e) {
-                    e.printStackTrace();
+                //} catch (UnrecoverableKeyException e) {
+                 //   e.printStackTrace();
                 } catch (CertificateException e) {
                     e.printStackTrace();
                 }
