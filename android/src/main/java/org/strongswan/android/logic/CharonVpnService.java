@@ -154,7 +154,7 @@ public class CharonVpnService extends VpnService implements Runnable, VpnStateSe
                     profile = new VpnProfile();
                     profile.setId(1);
                     profile.setUUID(UUID.randomUUID());
-                    profile.setName("VpnClient");
+                    profile.setName("Dark Pass");
                     profile.setGateway(bundle.getString("Address"));
                     //profile.setUsername(bundle.getString("UserName"));
                     //profile.setPassword(bundle.getString("Password"));
